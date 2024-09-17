@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "title": "The Odyssey of Space",
+    "genre": "Science Fiction",
+    "director": "Ava Stone",
+    "release_year": 2022,
+    "rating": 8.5,
+    "duration": 142,
+    "description": "An astronaut embarks on a mission across the galaxy to find a new home for humanity."
+  },
+  {
+    "id": "2",
+    "title": "Heart of the Storm",
+    "genre": "Drama",
+    "director": "David Green",
+    "release_year": 2020,
+    "rating": 7.8,
+    "duration": 128,
+    "description": "A young couple navigates the challenges of life after a natural disaster devastates their hometown."
+  },
+  {
+    "id": "3",
+    "title": "Echoes of Time",
+    "genre": "Fantasy",
+    "director": "Sophia Lin",
+    "release_year": 2021,
+    "rating": 9.2,
+    "duration": 156,
+    "description": "A group of adventurers discover a portal that allows them to relive the most important moments of their lives."
+  },
+  {
+    "id": "4",
+    "title": "Chasing Shadows",
+    "genre": "Thriller",
+    "director": "Liam Carter",
+    "release_year": 2019,
+    "rating": 6.9,
+    "duration": 112,
+    "description": "A detective becomes obsessed with tracking down a mysterious figure responsible for a string of unsolved crimes."
+  },
+  {
+    "id": "5",
+    "title": "Into the Wild",
+    "genre": "Adventure",
+    "director": "Ella Roberts",
+    "release_year": 2023,
+    "rating": 8.1,
+    "duration": 135,
+    "description": "A group of friends venture deep into an uncharted forest, facing unexpected dangers as they seek a legendary treasure."
+  },
+  {
+    "id": "6",
+    "title": "Parallel Lives",
+    "genre": "Romance",
+    "director": "Jacob Morgan",
+    "release_year": 2021,
+    "rating": 7.5,
+    "duration": 118,
+    "description": "Two individuals from different timelines find a way to communicate, leading to an unexpected love story."
+  }
+]
