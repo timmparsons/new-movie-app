@@ -15,11 +15,11 @@ const EventPage = () => {
       <Text>Movie title: {movie?.title}</Text>
       <Text className="text-lg">{movie?.description}</Text>
 
-      <View className="h-200 space-between absolute bottom-0 left-0 right-0 flex-row justify-between border-t-2 border-gray-300 p-5 pb-10">
-        <Text>Save</Text>
+      <View className="h-200 space-between absolute bottom-0 left-0 right-0 flex-row items-center justify-between border-t-2 border-gray-300 p-5 pb-10">
+        <Text className="text-xl font-semibold">Save</Text>
 
-        <Pressable>
-          <Text>Send</Text>
+        <Pressable className="rounded-xl bg-red-300 p-5 px-8">
+          <Text className="text-lg font-bold text-white">Send</Text>
         </Pressable>
       </View>
     </View>
