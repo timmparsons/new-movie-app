@@ -10,11 +10,12 @@ export default function Auth() {
 
   async function signInWithEmail() {
     setLoading(true);
+    console.log('Clicked');
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,
     });
-
+    console.log(error);
     if (error) Alert.alert(error.message);
     setLoading(false);
   }
