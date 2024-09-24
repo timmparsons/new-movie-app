@@ -41,7 +41,7 @@ export default function Auth() {
         onChangeText={(text) => setEmail(text)}
         value={email}
         placeholder="email@address.com"
-        autoCapitalize={'none'}
+        autoCapitalize="none"
         className="rounded-m3 border border-gray-200 p-3"
       />
       <TextInput
@@ -49,7 +49,7 @@ export default function Auth() {
         value={password}
         secureTextEntry={true}
         placeholder="Password"
-        autoCapitalize={'none'}
+        autoCapitalize="none"
         className="rounded-m3 border border-gray-200 p-3"
       />
 
