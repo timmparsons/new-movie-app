@@ -1,12 +1,20 @@
 import { Session } from '@supabase/supabase-js';
-import { createContext, useState, useEffect, useContext } from 'react';
+import { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 import { ActivityIndicator } from 'react-native';
 
 import { supabase } from '~/utils/supabase';
 
 const AuthContext = createContext({});
 
-export default function AuthProvider({ children }) {
+interface Props {
+  children?: ReactNode;
+}
+
+interface AuthProps {
+  isAuthenticated?: boolean;
+}
+
+export default function AuthProvider({ children }: Props) {
   const [session, setSession] = useState<Session | null>(null);
   const [isReady, setIsReady] = useState(false);
 
@@ -33,4 +41,4 @@ export default function AuthProvider({ children }) {
   );
 }
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = (): AuthProps => useContext(AuthContext);

@@ -1,6 +1,7 @@
 import { Stack } from 'expo-router';
 import React, { useState } from 'react';
-import { Alert, StyleSheet, View, TextInput, Button, Pressable, Text } from 'react-native';
+import { Alert, View, TextInput, Pressable, Text } from 'react-native';
+
 import { supabase } from '~/utils/supabase';
 
 export default function Auth() {
@@ -12,8 +13,8 @@ export default function Auth() {
     setLoading(true);
     console.log('Clicked');
     const { error } = await supabase.auth.signInWithPassword({
-      email: email,
-      password: password,
+      email,
+      password,
     });
     console.log(error);
     if (error) Alert.alert(error.message);
@@ -26,8 +27,8 @@ export default function Auth() {
       data: { session },
       error,
     } = await supabase.auth.signUp({
-      email: email,
-      password: password,
+      email,
+      password,
     });
 
     if (error) Alert.alert(error.message);
@@ -48,7 +49,6 @@ export default function Auth() {
       <TextInput
         onChangeText={(text) => setPassword(text)}
         value={password}
-        secureTextEntry={true}
         placeholder="Password"
         autoCapitalize="none"
         className="rounded-m3 border border-gray-200 p-3"
@@ -72,18 +72,3 @@ export default function Auth() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 40,
-    padding: 12,
-  },
-  verticallySpaced: {
-    paddingTop: 4,
-    paddingBottom: 4,
-    alignSelf: 'stretch',
-  },
-  mt20: {
-    marginTop: 20,
-  },
-});
