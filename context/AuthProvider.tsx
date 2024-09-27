@@ -12,6 +12,12 @@ interface Props {
 
 interface AuthProps {
   isAuthenticated?: boolean;
+  session: {
+    user: {
+      id: string;
+      email: string;
+    };
+  };
 }
 
 export default function AuthProvider({ children }: Props) {
