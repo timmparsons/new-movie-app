@@ -1,6 +1,7 @@
 import Feather from '@expo/vector-icons/Feather';
 import { Link } from 'expo-router';
 import { Text, View, Image, Pressable } from 'react-native';
+// import { supabase } from '~/utils/supabase';
 
 const MovieListItem = ({ movie }: any) => {
   return (

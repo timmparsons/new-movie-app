@@ -1,11 +1,21 @@
 import { Stack } from 'expo-router';
+import { useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 
-import movies from '../../assets/movies.json';
-
 import MovieListItem from '~/components/MovieListItem';
+import { supabase } from '~/utils/supabase';
 
-export default function Home() {
+export default function Movies() {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  const fetchMovies = async () => {
+    let { data, error } = await supabase.from('movies').select('*');
+    setMovies(data);
+  };
+
   return (
     <>
       <Stack.Screen options={{ title: 'Movies' }} />

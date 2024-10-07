@@ -57,6 +57,9 @@
     "release_year": 2021,
     "rating": 7.5,
     "duration": 118,
-    "description": "Two individuals from different timelines find a way to communicate, leading to an unexpected love story."
+    "description": "Two individuals from different timelines find a way to communicate, leading to an unexpected love story.",
+   "image_uri": "www.imageurl.com",
+   "cast" : ["Adam Sandler"],
+    "user_id": 1
   }
 ]

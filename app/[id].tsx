@@ -1,14 +1,30 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
-import React from 'react';
-import { View, Text, Pressable } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Pressable, ActivityIndicator } from 'react-native';
 
-import movies from '../assets/movies.json';
+import { supabase } from '~/utils/supabase';
 
 const EventPage = () => {
   const { id } = useLocalSearchParams();
 
-  const movie = movies.find((movie) => movie.id === id);
+  const [movie, setMovie] = useState(null);
+  const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    fetchEvent();
+  }, [id]);
+
+  const fetchEvent = async () => {
+    setLoading(true);
+    const { data, error } = await supabase.from('movies').select('*').eq('id', id).single();
+    setMovie(data);
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <ActivityIndicator />;
+  }
+  console.log('XXX ', movie);
   return (
     <View className="flex-1">
       <Stack.Screen options={{ title: 'movie', headerBackTitleVisible: false }} />
